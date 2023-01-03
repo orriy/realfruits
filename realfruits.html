@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="common/my_rest.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="common/realfruits.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(function () {
+        $(".ham").click(function () {
+          $(".hd nav").toggleClass("on");
+        });
+
+        $("window").resize(function () {
+          setTimeout(function () {
+            $(".hd nav").removeClass("on");
+          }, 3000);
+        });
+        $(function () {
+          var swiper1 = new Swiper(".slide1", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            breakpoints: {
+              640: {
+                slidesPerView: 1,
+              },
+              800: {
+                slidesPerView: 4,
+              },
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="hd">
+      <div class="top_menu">
+        <div class="right">
+          <a href="#">회원가입</a>
+          <a href="#">로그인</a>
+          <a href="#">고객센터</a>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-bars ham"></i>
+        </div>
+      </div>
+      <nav>
+        <h1>
+          <a href=""><img src="./img/리얼후르츠logo.svg" alt="" /></a>
+        </h1>
+        <div class="gnb">
+          <a href="">정기배송</a>
+
+          <a href="">제철과일</a>
+
+          <a href="">콘텐츠</a>
+
+          <a href="">리얼후르츠</a>
+
+          <a href="">비즈몰</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="sec1 mw">
+      <div class="heading1">
+        <p class="b_title1">건강해지는, 리얼후르츠 과일 정기배송</p>
+        <p class="b_title2">우리가족 맞춤형 과일 정기배송</p>
+        <p>
+          <span> &#35;제철과일 </span> <span> &#35;신선과일 </span>
+          <span> &#35; RealFruit </span>
+        </p>
+        <a href="#" class="link">보러가기</a>
+      </div>
+    </section>
+
+    <section class="sec2 mw">
+      <h1>이 달의 제철과일</h1>
+      <!-- Swiper -->
+      <div #swiperRef="" class="swiper slide1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="sh_img"><img src="./img/shopping01.png" alt="" /></div>
+            <div class="cart_img"><img src="./img/cart.png" alt="" /></div>
+            <p class="p_title">리얼후르츠 청도반시 5kg</p>
+            <p class="p_price">30,000원</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="sh_img"><img src="./img/shopping02.png" alt="" /></div>
+            <div class="cart_img"><img src="./img/cart.png" alt="" /></div>
+            <p class="p_title">리얼후르츠 메론 5kg</p>
+            <p class="p_price">60,000원</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="sh_img"><img src="./img/shopping03.png" alt="" /></div>
+            <div class="cart_img"><img src="./img/cart.png" alt="" /></div>
+            <p class="p_title">리얼후르츠 망고 3kg</p>
+            <p class="p_price">45,000원</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="sh_img"><img src="./img/shopping04.png" alt="" /></div>
+            <div class="cart_img"><img src="./img/cart.png" alt="" /></div>
+            <p class="p_title">리얼후르츠 사과 5kg</p>
+            <p class="p_price">50,000원</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="sh_img"><img src="./img/shopping05.png" alt="" /></div>
+            <div class="cart_img"><img src="./img/cart.png" alt="" /></div>
+            <p class="p_title">리얼후르츠 자몽 5kg</p>
+            <p class="p_price">25,000원</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="sh_img"><img src="./img/shopping06.png" alt="" /></div>
+            <div class="cart_img"><img src="./img/cart.png" alt="" /></div>
+            <p class="p_title">리얼후르츠 배 10kg</p>
+            <p class="p_price">35,000원</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next next1"></div>
+      <div class="swiper-button-prev prev1"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <section class="sec3 mw">
+      <h2>과일 보관법</h2>
+      <div>
+        <p class="title2">상큼 쌉싸름한 자몽</p>
+        <p class="country">수입산(미국,남아공)</p>
+
+        <p class="ex1">
+          <span
+            >햇볕이 들지 않는 서늘한 곳에서 3일 정도 보관이 가능합니다.</span
+          >
+        </p>
+        <p class="ex2">
+          <span>
+            시원하게 보관하시고 싶으시다면 신문지로 잘 싸서 냉장 보관하시면
+            시원하게 즐기실 수 있습니다.</span
+          >
+        </p>
+
+        <a href="#" class="link2">더 보러가기</a>
+      </div>
+      <div class="save_img">
+        <a href=""><img src="./img/save_img.png" alt="" /></a>
+      </div>
+    </section>
+
+    <section class="sec4 mw">
+      <h2>더 맛있게 즐기는 법</h2>
+      <div class="menu1">
+        <p class="recipe1">
+          <img src="./img/recipe01.png" alt="" />
+          <span class="re_name">과일샐러드</span>
+        </p>
+        <p class="recipe2">
+          <img src="./img/recipe02.png" alt="" />
+          <span class="re_name">베리팬케이크</span>
+        </p>
+      </div>
+      <div class="menu2">
+        <p class="recipe3">
+          <img src="./img/recipe03.png " alt="" />
+          <span class="re_name">석류에이드</span>
+        </p>
+        <p class="recipe4">
+          <img src="./img/recipe04.png" alt="" />
+          <span class="re_name">멜론빙수</span>
+        </p>
+      </div>
+      <div class="menu3">
+        <p class="recipe5">
+          <img src="./img/recipe05.png" alt="" />
+          <span class="re_name">딸기타르트</span>
+        </p>
+        <p class="recipe6">
+          <img src="./img/recipe06.png" alt="" />
+          <span class="re_name">파운드케이크</span>
+        </p>
+      </div>
+      <div class="menu4">
+        <p class="recipe7">
+          <img src="./img/recipe07.png" alt="" />
+          <span class="re_name">과일 아이스크림</span>
+        </p>
+        <p class="recipe8">
+          <img src="./img/recipe08.png" alt="" />
+          <span class="re_name">과일샌드위치</span>
+        </p>
+      </div>
+      <div class="menu5">
+        <p class="recipe9">
+          <img src="./img/recipe09.png" alt="" />
+          <span class="re_name">오렌지푸딩</span>
+        </p>
+        <p class="recipe10">
+          <img src="./img/recipe10.png" alt="" />
+          <span class="re_name">딸기수플레</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="sec5 mw">
+      <h2>리얼후르츠 이벤트</h2>
+      <article class="event_con">
+        <div class="event_list">
+          <div class="event_img"><img src="./img/even01.png" alt="" /></div>
+          <div class="event_dec">
+            <p class="sub_txt">리얼후르츠 고객 감사 이벤트</p>
+            <p class="info_txt">리뷰 올리고 스타벅스 모바일 상품권 받자</p>
+          </div>
+          <a href="#">자세히 보기</a>
+        </div>
+        <div class="event_list">
+          <div class="event_img"><img src="./img/event02.png" alt="" /></div>
+          <div class="event_dec">
+            <p class="sub_txt">리얼후르츠 과일 쪼개기 이벤트</p>
+            <p class="info_txt">다함께 즐기고 제철과일 받아보자</p>
+          </div>
+          <a href="#">자세히 보기</a>
+        </div>
+        <div class="event_list">
+          <div class="event_img"><img src="./img/even03.png" alt="" /></div>
+          <div class="event_dec">
+            <p class="sub_txt">기존회원을 위한 정기배송 Size up! 이벤트</p>
+          </div>
+          <a href="#">자세히 보기</a>
+        </div>
+      </article>
+    </section>
+
+    <footer class="mw">
+      <div class="foot_top">
+        <nav>
+          <a href="">이용약관</a>
+          <a href="">개인정보취급방침</a>
+          <a href="">HOME</a>
+        </nav>
+      </div>
+      <div class="foot_bottom">
+        <div class="foot_logo">
+          <img src="./img/리얼후르츠logo.svg" alt="" />
+        </div>
+        <div class="foot_day">
+          <p><span>고객만족센터</span></p>
+          <p class="number"><strong>1877-7235</strong></p>
+          <p><span>[평일]AM 10:00 ~ PM 06:00</span></p>
+          <span>[점심]AM 12:00 ~ PM 01:00</span>
+          <p><span>토요일 / 일요일 / 공휴일 휴무</span></p>
+        </div>
+        <address class="copy">
+          <p>
+            <span>법인명 : </span> <strong>주식회사 레드체리</strong>
+            <span>대표자(성명) : </span> <strong>최준호</strong>
+          </p>
+
+          <p>
+            <sapn>사업자등록번호 : </sapn> <strong>583-87-00961</strong>
+            <sapn>통신판매업신고 : </sapn>
+            <strong>제2018-서울마포-1310호[사업자정보확인]</strong>
+          </p>
+
+          <p>
+            <sapn>고객센터 : </sapn> <strong>583-87-00961</strong>
+            <sapn>사업자등록번호 : </sapn> <strong>1877-7235</strong>
+          </p>
+
+          <p>
+            <sapn>주소 : </sapn>
+            <strong
+              >경기도 고양시 일산동구 무궁화로 20-18, 507호 (42702)</strong
+            >
+          </p>
+          <p>
+            <sapn>개인정보책임자 : </sapn>
+            <strong>이다영 redcherry7272@naver.com</strong>
+          </p>
+        </address>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper1 = new Swiper(".slide1", {
+        slidesPerView: 4,
+        centeredSlides: true,
+        spaceBetween: 30,
+        pagination: {
+          el: ".pg1",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next next1",
+          prevEl: ".swiper-button-prev prev1",
+        },
+      });
+    </script>
+  </body>
+</html>
